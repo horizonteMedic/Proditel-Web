@@ -1,0 +1,51 @@
+/* src/app/Banner.css */
+.banner-text {
+  color: white; /* Color del texto */
+  font-size:  1.2em; /* Tamaño de fuente relativo */
+  margin-bottom: 2em;
+  padding-left: 1.5rem; /* Espacio adicional a la izquierda para la línea */
+  border-left: 5px solid #ff5100; /* Línea azul a la izquierda */
+  text-align: justify; /* Justificar el texto */
+  margin-top: 10em;
+  font-weight: 300; 
+ }
+
+
+@media (min-width: 640px) {
+  .banner-overlay {
+      padding: 10rem; /* Padding para tabletas y dispositivos más grandes */
+  }
+}
+
+/* src/app/Banner.css */
+.contact-button {
+  background-color: #ff5000; /* Color de fondo del botón */
+  color: white; /* Color del texto del botón */
+  padding: 0.5em 2em; /* Espaciado interno del botón */
+  border-radius: 9999px; /* Bordes redondeados */
+  font-weight: 700; /* Peso de fuente */
+  font-size: 1em; /* Tamaño de fuente */
+  display: inline-flex; /* Flexbox para alinear el icono y el texto */
+  align-items: center; /* Centra verticalmente el contenido */
+  position: relative; /* Para posicionar el icono */
+  overflow: hidden; /* Asegura que el icono no afecte el tamaño del botón */
+  transition: transform 0.3s, padding 0.3s; /* Transiciones para el efecto hover */
+}
+
+.contact-button:hover {
+  transform: scale(1.1); /* Efecto de escalado al pasar el ratón */
+}
+
+.contact-button i {
+  margin-left: 0.5em; /* Espacio entre el texto y el icono */
+  opacity: 0; /* Oculta el icono por defecto */
+  position: absolute; /* Posiciona el icono absolutamente dentro del botón */
+  right: 1em; /* Ajusta la posición a la derecha del botón */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Transición para opacidad y escalado */
+  transform: translateX(10px); /* Desplaza el icono ligeramente a la derecha por defecto */
+}
+
+.contact-button:hover i {
+  opacity: 1; /* Muestra el icono cuando el botón está en hover */
+  transform: translateX(0); /* Restablece la posición del icono */
+}

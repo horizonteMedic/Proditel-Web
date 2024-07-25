@@ -1,0 +1,71 @@
+.contact-form-card {
+    background-color: white; /* Color de fondo blanco para la tarjeta */
+    padding: 30px; /* Mayor espacio interno */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
+    max-width: 800px; /* Ancho máximo de la tarjeta */
+    margin: 20px auto; /* Espacio arriba y abajo, y centrar horizontalmente */
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espacio entre los elementos del formulario */
+}
+
+.contact-form h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+    color: #333; /* Color del título */
+    text-align: center; /* Centra el título */
+}
+
+.contact-form .form-row {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+    gap: 15px; /* Espacio entre los campos */
+}
+
+.contact-form input {
+    flex: 1 1 30%; /* Toma el 30% del ancho disponible, ajustable según el diseño */
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box; /* Incluye el padding en el tamaño total */
+}
+
+.contact-form button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    background-color: #007bff; /* Color del botón */
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3; /* Color del botón cuando se pasa el mouse */
+    transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
+}
+
+textarea {
+    width: 100%; /* Hace que el área de texto ocupe el ancho completo */
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    resize: vertical; /* Permite ajustar el tamaño verticalmente */
+    min-height: 150px; /* Altura mínima del área de texto */
+}
+
+@media (max-width: 600px) {
+    .contact-form .form-row {
+        flex-direction: column; /* Cambia la dirección a columna en pantallas pequeñas */
+    }
+
+    .contact-form input {
+        flex: 1 1 100%; /* Hace que los campos de entrada ocupen todo el ancho en pantallas pequeñas */
+    }
+}

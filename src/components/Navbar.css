@@ -1,0 +1,113 @@
+/* Estilos generales para el Navbar */
+.navbar {
+  background-color: white;
+  padding: 1rem;
+  position: relative;
+}
+
+/* Contenedor del Navbar */
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Estilo para el logo */
+.navbar-logo img {
+  height: 2.5rem;
+}
+
+/* Estilos para la lista de navegación */
+.nav-list {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+}
+
+/* Estilo para los enlaces de navegación */
+.nav-link {
+  position: relative;
+  color: #144478;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  padding: 0.8rem 0;
+  transition: color 0.3s ease;
+  cursor: pointer; /* Cambia el cursor a pointer */
+}
+
+/* Línea de subrayado */
+.underline {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #144478;
+  transition: width 0.3s ease;
+  border-radius: 5px;
+}
+
+/* Mostrar subrayado en hover */
+.nav-link:hover .underline {
+  width: 100%;
+}
+
+/* Estilo para el botón de menú móvil */
+.menu-button {
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none; /* Ocultar el botón de menú por defecto */
+}
+
+/* Estilo para el menú desplegable en móviles */
+.mobile-menu {
+  display: none; /* Ocultar el menú por defecto */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 1rem;
+  z-index: 10;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-menu li {
+  margin: 0;
+}
+
+.mobile-menu a {
+  display: block;
+  padding: 0.8rem;
+  color: #144478;
+  text-decoration: none;
+  cursor: pointer; /* Cambia el cursor a pointer */
+}
+
+/* Mostrar el menú desplegable en dispositivos móviles */
+.mobile-menu-open {
+  display: block;
+}
+
+/* Mostrar el botón de menú en dispositivos móviles */
+@media (max-width: 768px) {
+  .menu-button {
+    display: block;
+  }
+  .nav-list {
+    display: none;
+  }
+}

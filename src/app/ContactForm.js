@@ -86,6 +86,8 @@ const ContactForm = () => {
   };
 
   return (
+    <section id="contact" className="contact-form">
+
     <div style={containerStyle}>
       <div style={formWrapperStyle}>
         <h2 className="text-lg font-semibold mb-3 text-center">Contáctanos</h2>
@@ -149,6 +151,8 @@ const ContactForm = () => {
         </form>
       </div>
     </div>
+    </section>
+
   );
 };
 

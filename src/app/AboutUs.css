@@ -1,0 +1,76 @@
+/* src/app/AboutUs.css */
+
+/* Animación de entrada desde la derecha */
+@keyframes slideInFromRight {
+    from {
+      opacity: 0;
+      transform: translateX(20px); /* Desplazamiento desde la derecha */
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0); /* Posición final */
+    }
+  }
+  
+  .about-us {
+    padding: 20px; /* Añade espacio interno para evitar que el contenido se salga en pantallas pequeñas */
+    max-width: 1000px;
+    margin: 40px auto;
+    box-sizing: border-box; /* Incluye el padding en el cálculo del ancho */
+    animation: slideInFromRight 1s ease-out; /* Añade la animación de entrada desde la derecha */
+  }
+  
+  .about-us .container {
+    padding: 0;
+  }
+  
+  .about-us h1 {
+    font-size: 35px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 600;
+    color: #144478; /* Color principal de Proditel */
+    animation: slideInFromRight 1s ease-out; /* Añade la animación de entrada desde la derecha */
+  }
+  
+  .about-us p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: center;
+    animation: slideInFromRight 1s ease-out; /* Añade la animación de entrada desde la derecha */
+  }
+  
+  .about-us strong {
+    font-weight: bold;
+    color: #333; /* Color del texto destacado */
+  }
+  
+  @media (max-width: 768px) {
+    .about-us {
+      padding: 15px; /* Ajusta el padding para pantallas medianas */
+    }
+  
+    .about-us h1 {
+      font-size: 30px; /* Reduce el tamaño del título en pantallas más pequeñas */
+    }
+  
+    .about-us p {
+      font-size: 15px; /* Ajusta el tamaño del texto en pantallas medianas */
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .about-us {
+      padding: 10px; /* Menos padding en pantallas muy pequeñas */
+    }
+  
+    .about-us h1 {
+      font-size: 25px; /* Tamaño de fuente aún más pequeño en pantallas muy pequeñas */
+    }
+  
+    .about-us p {
+      font-size: 13px; /* Tamaño de fuente más pequeño en pantallas muy pequeñas */
+    }
+  }
+  

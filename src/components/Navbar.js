@@ -1,189 +1,118 @@
-// src/components/Navbar.js
 import React, { useState } from 'react';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import './Navbar.css'; // Importa la hoja de estilo CSS
+import { Link } from 'react-scroll'; // Importa la función de desplazamiento
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const navbarStyle = {
-    backgroundColor: 'white',
-    padding: '1rem',
-    position: 'relative',
-  };
-
-  const containerStyle = {
-    maxWidth: '1200px',
-    margin: '0 auto',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    flexWrap: 'wrap',
-  };
-
-  const logoStyle = {
-    height: '2.5rem',
-  };
-
-  const navListStyle = {
-    display: 'flex',
-    gap: '1.5rem',
-    listStyle: 'none',
-    padding: '0',
-    margin: '0',
-    flexWrap: 'wrap',
-  };
-
-  const navLinkStyle = {
-    position: 'relative',
-    color: '#144478',
-    textDecoration: 'none',
-    fontFamily: '"Montserrat", sans-serif',
-    fontWeight: '700',
-    padding: '0.8rem 0',
-    transition: 'color 0.3s ease',
-  };
-
-  const lineStyle = {
-    position: 'absolute',
-    left: '0',
-    bottom: '0',
-    width: '0',
-    height: '2px',
-    backgroundColor: '#144478',
-    transition: 'width 0.3s ease',
-    borderRadius: '5px',
-  };
-
-  const menuButtonStyle = {
-    fontSize: '1.5rem',
-    cursor: 'pointer',
-    display: 'none',
-  };
-
-  const mobileMenuStyle = {
-    display: isOpen ? 'block' : 'none',
-    position: 'absolute',
-    top: '100%',
-    left: '0',
-    width: '100%',
-    backgroundColor: 'white',
-    boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
-    padding: '1rem',
-    zIndex: 10,
-  };
-
-  // Media query styles
-  const mediaQueryStyles = `
-    @media (max-width: 768px) {
-      .menu-button {
-        display: block;
-      }
-      .nav-list {
-        display: none;
-      }
-      .mobile-menu {
-        display: block;
-      }
-    }
-  `;
-
   return (
-    <nav style={navbarStyle}>
-      <style>{mediaQueryStyles}</style>
-      <div style={containerStyle}>
+    <nav className="navbar">
+      <div className="navbar-container">
         {/* Logo */}
-        <div>
-          <img src="/img/logo.svg" alt="Logo" style={logoStyle} />
+        <div className="navbar-logo">
+          <img src="/img/logo.svg" alt="Logo" />
         </div>
         {/* Botón de menú móvil */}
         <div
           className="menu-button"
-          style={menuButtonStyle}
           onClick={() => setIsOpen(!isOpen)}
         >
           <i className="fas fa-bars"></i>
         </div>
         {/* Enlaces de navegación para pantallas grandes */}
-        <ul className="nav-list" style={navListStyle}>
-          <li style={{ position: 'relative' }}>
-            <a
-              href="#"
-              style={navLinkStyle}
-              onMouseOver={(e) => (e.currentTarget.querySelector('span').style.width = '100%')}
-              onMouseOut={(e) => (e.currentTarget.querySelector('span').style.width = '0')}
+        <ul className={`nav-list ${isOpen ? 'nav-list-open' : ''}`}>
+          <li>
+            <Link
+              to="about-us"
+              smooth={true}
+              duration={500}
+              className="nav-link"
+              onClick={() => setIsOpen(false)}
             >
               Nosotros
-              <span style={lineStyle}></span>
-            </a>
+              <span className="underline"></span>
+            </Link>
           </li>
-          <li style={{ position: 'relative' }}>
-            <a
-              href="#"
-              style={navLinkStyle}
-              onMouseOver={(e) => (e.currentTarget.querySelector('span').style.width = '100%')}
-              onMouseOut={(e) => (e.currentTarget.querySelector('span').style.width = '0')}
+          <li>
+            <Link
+              to="servicios"
+              smooth={true}
+              duration={500}
+              className="nav-link"
+              onClick={() => setIsOpen(false)}
             >
               Servicios
-              <span style={lineStyle}></span>
-            </a>
+              <span className="underline"></span>
+            </Link>
           </li>
-          <li style={{ position: 'relative' }}>
-            <a
-              href="#"
-              style={navLinkStyle}
-              onMouseOver={(e) => (e.currentTarget.querySelector('span').style.width = '100%')}
-              onMouseOut={(e) => (e.currentTarget.querySelector('span').style.width = '0')}
+          <li>
+            <Link
+              to="proyectos"
+              smooth={true}
+              duration={500}
+              className="nav-link"
+              onClick={() => setIsOpen(false)}
             >
               Proyectos
-              <span style={lineStyle}></span>
-            </a>
+              <span className="underline"></span>
+            </Link>
           </li>
-          <li style={{ position: 'relative' }}>
-            <a
-              href="#"
-              style={navLinkStyle}
-              onMouseOver={(e) => (e.currentTarget.querySelector('span').style.width = '100%')}
-              onMouseOut={(e) => (e.currentTarget.querySelector('span').style.width = '0')}
+          <li>
+            <Link
+              to="contact"
+              smooth={true}
+              duration={500}
+              className="nav-link"
+              onClick={() => setIsOpen(false)}
             >
               Contáctanos
-              <span style={lineStyle}></span>
-            </a>
+              <span className="underline"></span>
+            </Link>
           </li>
         </ul>
         {/* Menú desplegable para móviles */}
-        <div className="mobile-menu" style={mobileMenuStyle}>
-          <ul style={{ listStyle: 'none', padding: '0', margin: '0' }}>
+        <div className={`mobile-menu ${isOpen ? 'mobile-menu-open' : ''}`}>
+          <ul>
             <li>
-              <a
-                href="#"
-                style={{ display: 'block', padding: '0.8rem', color: '#144478', textDecoration: 'none' }}
+              <Link
+                to="about-us"
+                smooth={true}
+                duration={500}
+                onClick={() => setIsOpen(false)}
               >
                 Nosotros
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
-                style={{ display: 'block', padding: '0.8rem', color: '#144478', textDecoration: 'none' }}
+              <Link
+                to="servicios"
+                smooth={true}
+                duration={500}
+                onClick={() => setIsOpen(false)}
               >
                 Servicios
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
-                style={{ display: 'block', padding: '0.8rem', color: '#144478', textDecoration: 'none' }}
+              <Link
+                to="proyectos"
+                smooth={true}
+                duration={500}
+                onClick={() => setIsOpen(false)}
               >
                 Proyectos
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
-                style={{ display: 'block', padding: '0.8rem', color: '#144478', textDecoration: 'none' }}
+              <Link
+                to="contact"
+                smooth={true}
+                duration={500}
+                onClick={() => setIsOpen(false)}
               >
                 Contáctanos
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
