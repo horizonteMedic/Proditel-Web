@@ -1,0 +1,39 @@
+/* src/components/Footer.css */
+
+.footer {
+    background-color: #2d2d2d; /* Fondo oscuro */
+  }
+  
+  .footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer h2, .footer h3 {
+    color: #f1f1f1;
+  }
+  
+  .footer p {
+    color: #b0b0b0;
+  }
+  
+  .footer .footer-link {
+    color: #f1f1f1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer .footer-link:hover {
+    color: #ff5100;
+  }
+  
+  .footer .social-icon {
+    color: #f1f1f1;
+    font-size: 1.25rem;
+    transition: color 0.3s ease;
+  }
+  
+  .footer .social-icon:hover {
+    color: #ff5100;
+  }
+  

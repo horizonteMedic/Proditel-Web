@@ -1,0 +1,11 @@
+/* src/app/Map.css */
+.map-container {
+    width: 100%;
+    max-width: 800px; /* Ajusta según el diseño */
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
