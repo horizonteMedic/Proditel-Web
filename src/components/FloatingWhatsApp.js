@@ -3,7 +3,7 @@ import './FloatingWhatsApp.css'; // Asegúrate de crear este archivo CSS
 
 const FloatingWhatsApp = () => {
     const whatsappNumber = '51950400000'; // Número de WhatsApp en formato internacional sin el símbolo '+'
-    const message = encodeURIComponent('Hola! ¿En qué puedo ayudarte hoy? Estamos aquí para resolver tus dudas y ofrecerte la mejor atención. ¡Esperamos tu mensaje!');
+    const message = encodeURIComponent('Hola Proditel, Necesito información.');
 
     return (
         <a

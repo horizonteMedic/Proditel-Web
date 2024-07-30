@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import '@fortawesome/fontawesome-free/css/all.min.css';
-import './Navbar.css'; // Importa la hoja de estilo CSS
-import { Link } from 'react-scroll'; // Importa la función de desplazamiento
+import './Navbar.css'; // Import the CSS stylesheet
+import { Link } from 'react-scroll'; // Import the scroll function
+import { Link as RouterLink } from 'react-router-dom'; // Import Link from react-router-dom for logo link
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,16 +12,18 @@ const Navbar = () => {
       <div className="navbar-container">
         {/* Logo */}
         <div className="navbar-logo">
-          <img src="/img/logo.svg" alt="Logo" />
+          <RouterLink to="/">
+            <img src="/img/logo.svg" alt="Logo" />
+          </RouterLink>
         </div>
-        {/* Botón de menú móvil */}
+        {/* Mobile menu button */}
         <div
           className="menu-button"
           onClick={() => setIsOpen(!isOpen)}
         >
           <i className="fas fa-bars"></i>
         </div>
-        {/* Enlaces de navegación para pantallas grandes */}
+        {/* Navigation links for larger screens */}
         <ul className={`nav-list ${isOpen ? 'nav-list-open' : ''}`}>
           <li>
             <Link
@@ -71,7 +74,7 @@ const Navbar = () => {
             </Link>
           </li>
         </ul>
-        {/* Menú desplegable para móviles */}
+        {/* Mobile dropdown menu */}
         <div className={`mobile-menu ${isOpen ? 'mobile-menu-open' : ''}`}>
           <ul>
             <li>

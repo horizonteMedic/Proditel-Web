@@ -1,78 +1,84 @@
 /* src/app/MisionVision.css */
 
-/* Animación de entrada desde la izquierda */
-@keyframes slideInFromLeft {
+/* Animación de entrada desde los costados */
+@keyframes slideInFromSides {
     from {
-      opacity: 0;
-      transform: translateX(-20px); /* Desplazamiento desde la izquierda */
+        opacity: 0;
+        transform: translateX(-50px); /* Desplazamiento desde la izquierda */
     }
     to {
-      opacity: 1;
-      transform: translateX(0); /* Posición final */
+        opacity: 1;
+        transform: translateX(0); /* Posición final */
     }
-  }
-  
-  .mision-vision {
+}
+
+.mision-vision {
     display: flex;
     flex-wrap: wrap; /* Permite que las columnas se envuelvan en dispositivos pequeños */
-    padding-left: 20px; /* Reduce el padding en móviles para ajustar mejor el contenido */
-    padding-right: 20px; /* Agrega padding a la derecha para móviles */
-    padding-bottom: 40px; /* Reduce el padding en la parte inferior */
-    gap: 20px; /* Añade espacio entre columnas */
+    padding: 20px; /* Padding uniforme para el contenedor */
+    gap: 20px; /* Espacio entre columnas */
     text-align: justify;
-    animation: slideInFromLeft 1s ease-out; /* Añade la animación de entrada desde la izquierda */
-  }
-  
-  .mision-vision-column {
+    opacity: 0; /* Inicialmente invisible */
+    transform: translateX(0); /* Inicialmente en posición final */
+    animation: slideInFromSides 2s ease-out forwards; /* Aplicar animación de entrada */
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+    overflow: hidden; /* Evita el desbordamiento */
+    max-width: 100%; /* Asegura que el contenedor no se desborde horizontalmente */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+}
+
+.mision-vision.animate-slide-in {
+    opacity: 1; /* Hacer visible cuando esté en vista */
+    transform: translateX(0); /* Volver a la posición original */
+}
+
+.mision-vision-column {
     flex: 1; /* Ocupa el mismo espacio en las columnas */
     min-width: 300px; /* Ancho mínimo para columnas en pantallas grandes */
     padding: 20px; /* Espacio interno de las columnas */
     box-sizing: border-box; /* Incluye el padding en el cálculo del ancho */
-  }
-  
-  .mision-vision h2 {
+}
+
+.mision-vision h2 {
     font-size: 35px;
     text-align: center;
-    font-weight: 600; 
+    font-weight: 600;
     color: #144478; /* Color principal de Proditel */
     margin-bottom: 10px;
-    animation: slideInFromLeft 1s ease-out; /* Añade la animación de entrada desde la izquierda */
-  }
-  
-  .mision-vision p {
+}
+
+.mision-vision p {
     font-size: 16px;
     line-height: 1.6;
     color: #333; /* Color del texto */
-    animation: slideInFromLeft 1s ease-out; /* Añade la animación de entrada desde la izquierda */
-  }
-  
-  @media (max-width: 768px) {
+}
+
+/* Ajustes para pantallas más pequeñas */
+@media (max-width: 768px) {
     .mision-vision {
-      padding-left: 10px; /* Menos padding en móviles */
-      padding-right: 10px; /* Menos padding en móviles */
+        padding: 10px; /* Menos padding en móviles */
     }
-  
+
     .mision-vision-column {
-      min-width: 100%; /* Las columnas ocuparán el 100% del ancho en pantallas pequeñas */
-      padding: 10px; /* Menos padding interno en pantallas pequeñas */
+        min-width: 100%; /* Las columnas ocuparán el 100% del ancho en pantallas pequeñas */
+        padding: 10px; /* Menos padding interno en pantallas pequeñas */
     }
-  
+
     .mision-vision h2 {
-      font-size: 28px; /* Tamaño de fuente más pequeño en móviles */
+        font-size: 28px; /* Tamaño de fuente más pequeño en móviles */
     }
-  
+
     .mision-vision p {
-      font-size: 14px; /* Tamaño de fuente más pequeño en móviles */
+        font-size: 14px; /* Tamaño de fuente más pequeño en móviles */
     }
-  }
-  
-  @media (max-width: 400px) {
+}
+
+@media (max-width: 400px) {
     .mision-vision h2 {
-      font-size: 24px; /* Tamaño de fuente aún más pequeño en pantallas muy pequeñas */
+        font-size: 24px; /* Tamaño de fuente aún más pequeño en pantallas muy pequeñas */
     }
-  
+
     .mision-vision p {
-      font-size: 12px; /* Tamaño de fuente aún más pequeño en pantallas muy pequeñas */
+        font-size: 12px; /* Tamaño de fuente más pequeño en pantallas muy pequeñas */
     }
-  }
-  
+}

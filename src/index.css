@@ -1,7 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* src/index.css */
+
+/* Font definitions */
 .montserrat-regular {
   font-family: "Montserrat", sans-serif;
   font-weight: 400; /* Normal weight */
@@ -21,6 +22,7 @@
   font-style: italic;
 }
 
+/* Global styles */
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -30,8 +32,32 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Apply Montserrat Regular to paragraphs */
+p {
+  @apply montserrat-regular;
+  line-height: 1.5; /* Adjust as needed */
+}
+
+/* Apply Montserrat Bold to h1 headings */
+h1 {
+  @apply montserrat-bold;
+  line-height: 1.2; /* Adjust as needed */
+}
+
+/* Apply Montserrat Bold to h2 headings */
+h2 {
+  @apply montserrat-bold;
+  line-height: 1.3; /* Adjust as needed */
+}
+h3 {
+  @apply montserrat-bold;
+  line-height: 1.3; /* Adjust as needed */
+}
+li{
+  @apply montserrat-regular;
+}
+/* Example for code elements */
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-

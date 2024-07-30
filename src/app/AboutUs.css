@@ -1,10 +1,10 @@
 /* src/app/AboutUs.css */
 
-/* Animación de entrada desde la derecha */
-@keyframes slideInFromRight {
+/* Animación de entrada desde la izquierda */
+@keyframes slideInFromLeft {
     from {
       opacity: 0;
-      transform: translateX(20px); /* Desplazamiento desde la derecha */
+      transform: translateX(-20px); /* Desplazamiento desde la izquierda */
     }
     to {
       opacity: 1;
@@ -13,64 +13,69 @@
   }
   
   .about-us {
-    padding: 20px; /* Añade espacio interno para evitar que el contenido se salga en pantallas pequeñas */
-    max-width: 1000px;
-    margin: 40px auto;
-    box-sizing: border-box; /* Incluye el padding en el cálculo del ancho */
-    animation: slideInFromRight 1s ease-out; /* Añade la animación de entrada desde la derecha */
+      padding: 20px; /* Añade espacio interno para evitar que el contenido se salga en pantallas pequeñas */
+      max-width: 1000px;
+      margin: 40px auto;
+      box-sizing: border-box; /* Incluye el padding en el cálculo del ancho */
+      opacity: 0; /* Inicialmente invisible */
+      transform: translateX(-20px); /* Inicialmente desplazado hacia la izquierda */
+      transition: opacity 1s ease-out, transform 1s ease-out; /* Transiciones suaves */
+  }
+  
+  .about-us.animate-slide-in {
+      opacity: 1; /* Hacer visible cuando esté en vista */
+      transform: translateX(0); /* Volver a la posición original */
   }
   
   .about-us .container {
-    padding: 0;
+      padding: 0;
   }
   
   .about-us h1 {
-    font-size: 35px;
-    margin-bottom: 20px;
-    text-align: center;
-    font-weight: 600;
-    color: #144478; /* Color principal de Proditel */
-    animation: slideInFromRight 1s ease-out; /* Añade la animación de entrada desde la derecha */
+      font-size: 35px;
+      margin-bottom: 20px;
+      text-align: center;
+      font-weight: 600; 
+      color: #144478; /* Color principal de Proditel */
   }
   
   .about-us p {
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 20px;
-    text-align: center;
-    animation: slideInFromRight 1s ease-out; /* Añade la animación de entrada desde la derecha */
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      text-align: center;
   }
   
   .about-us strong {
-    font-weight: bold;
-    color: #333; /* Color del texto destacado */
+      font-weight: bold;
+      color: #333; /* Color del texto destacado */
   }
   
   @media (max-width: 768px) {
-    .about-us {
-      padding: 15px; /* Ajusta el padding para pantallas medianas */
-    }
+      .about-us {
+          padding: 15px; /* Ajusta el padding para pantallas medianas */
+      }
   
-    .about-us h1 {
-      font-size: 30px; /* Reduce el tamaño del título en pantallas más pequeñas */
-    }
+      .about-us h1 {
+          font-size: 30px; /* Reduce el tamaño del título en pantallas más pequeñas */
+      }
   
-    .about-us p {
-      font-size: 15px; /* Ajusta el tamaño del texto en pantallas medianas */
-    }
+      .about-us p {
+          font-size: 15px; /* Ajusta el tamaño del texto en pantallas medianas */
+      }
   }
   
   @media (max-width: 400px) {
-    .about-us {
-      padding: 10px; /* Menos padding en pantallas muy pequeñas */
-    }
+      .about-us {
+          padding: 10px; /* Menos padding en pantallas muy pequeñas */
+      }
   
-    .about-us h1 {
-      font-size: 25px; /* Tamaño de fuente aún más pequeño en pantallas muy pequeñas */
-    }
+      .about-us h1 {
+          font-size: 25px; /* Tamaño de fuente aún más pequeño en pantallas muy pequeñas */
+      }
   
-    .about-us p {
-      font-size: 13px; /* Tamaño de fuente más pequeño en pantallas muy pequeñas */
-    }
+      .about-us p {
+          font-size: 13px; /* Tamaño de fuente más pequeño en pantallas muy pequeñas */
+      }
   }
   
