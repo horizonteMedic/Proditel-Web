@@ -159,3 +159,11 @@
     margin-bottom: 0.5rem; /* Ajusta el margen inferior en pantallas muy pequeñas */
   }
 }
+
+/* Margenes laterales en pantallas grandes */
+@media (min-width: 1200px) {
+  .description {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}

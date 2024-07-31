@@ -2,7 +2,7 @@
 import React from 'react';
 import './CableadoEstructurado.css'; // Importa el CSS
 import '@fortawesome/fontawesome-free/css/all.min.css'; // Importa Font Awesome
-
+import OtrosServicios from './OtrosServicios';
 const bannerImage = '/img/Cableado-estructurado.jpeg'; // Ruta desde la carpeta public
 
 const CableadoEstructurado = () => {
@@ -30,6 +30,7 @@ const CableadoEstructurado = () => {
           <li><i className="fas fa-check-circle"></i> Soluciones personalizadas para tu empresa</li>
         </ul>
       </div>
+      <OtrosServicios />
     </>
   );
 };

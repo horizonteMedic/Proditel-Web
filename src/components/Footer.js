@@ -30,7 +30,7 @@ const Footer = () => {
           </div>
         </div>
         {/* Sección de Enlaces Rápidos */}
-        <div className="quick-links">
+        {/* <div className="quick-links">
           <h3 className="text-lg font-semibold mb-4">Enlaces Rápidos</h3>
           <ul>
             <li><a href="#" className="footer-link">Inicio</a></li>
@@ -38,10 +38,10 @@ const Footer = () => {
             <li><a href="#" className="footer-link">Proyectos</a></li>
             <li><a href="#" className="footer-link">Contáctanos</a></li>
           </ul>
-        </div>
+        </div> */}
         {/* Sección de Redes Sociales */}
         <div className="social-media">
-          <h3 className="text-lg font-semibold mb-4">Síguenos</h3>
+          <h3 className="mb-4" style={{fontSize:'20px'}}>Síguenos</h3>
           <div className="flex space-x-4">
             <a href="#" className="social-icon"><FontAwesomeIcon icon={faFacebookF} /></a>
             <a href="#" className="social-icon"><FontAwesomeIcon icon={faTwitter} /></a>
@@ -50,7 +50,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="text-center mt-12">
+      <div className="derechos">
         <p>&copy; 2024 Proditel. Todos los derechos reservados.</p>
       </div>
     </footer>

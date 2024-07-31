@@ -97,7 +97,7 @@ const Navbar = () => {
                 Servicios
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link
                 to="proyectos"
                 smooth={true}
@@ -106,8 +106,8 @@ const Navbar = () => {
               >
                 Proyectos
               </Link>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <Link
                 to="contact"
                 smooth={true}
@@ -116,7 +116,7 @@ const Navbar = () => {
               >
                 Contáctanos
               </Link>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>

@@ -3,7 +3,7 @@
 .navbar-mini {
     background-color: #ff5100;
     color: white;
-    padding: 0.5rem 1rem;
+    padding: 0.1rem 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -27,7 +27,7 @@
   .social-icons {
     display: flex;
     gap: 1rem;
-    margin-top: 0.5rem; /* Añadir margen superior para separar de la sección de contacto */
+    margin-top: 0rem; /* Añadir margen superior para separar de la sección de contacto */
   }
   
   .icon {

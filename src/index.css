@@ -56,6 +56,16 @@ h3 {
 li{
   @apply montserrat-regular;
 }
+
+span{
+  @apply montserrat-bold;
+}
+a{
+  @apply montserrat-regular;
+}
+
+
+
 /* Example for code elements */
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

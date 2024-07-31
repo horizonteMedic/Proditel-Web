@@ -1,0 +1,68 @@
+/* src/app/OtrosServicios.css */
+
+.otros-servicios {
+  padding: 2rem;
+  background-color: #f4f4f4; /* Color de fondo claro */
+  border-radius: 8px; /* Bordes redondeados opcional */
+  margin-top: 2rem; /* Espacio superior para separarlo del contenido anterior */
+  overflow: hidden; /* Oculta el desplazamiento si es necesario */
+  transition: all 0.3s ease; /* Transición suave para todos los cambios */
+}
+
+.otros-servicios h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333; /* Color del texto del título */
+}
+
+.otros-servicios .services-container {
+  display: flex;
+  flex-wrap: wrap; /* Permite que las tarjetas se envuelvan en lugar de tener scroll */
+  gap: 1rem; /* Espacio entre las tarjetas */
+  justify-content: center; /* Centra las tarjetas horizontalmente */
+}
+
+.otros-servicios .service-card {
+  flex: 1 1 calc(20% - 1rem); /* Ajusta el ancho de las tarjetas para que encajen sin scroll */
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  text-align: center;
+  min-width: 200px; /* Ancho mínimo de las tarjetas */
+  max-width: 250px; /* Ancho máximo de las tarjetas */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición para hover */
+}
+
+.otros-servicios .service-card:hover {
+  transform: scale(1.05); /* Escala suave cuando se pasa el mouse sobre la tarjeta */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada en hover */
+}
+
+.otros-servicios .service-card i {
+  font-size: 2rem;
+  color: #1d72b8; /* Color del icono */
+  margin-bottom: 0.5rem;
+}
+
+.otros-servicios .service-card h3 {
+  font-size: 1.25rem;
+  margin: 0.5rem 0;
+}
+
+.otros-servicios .service-card p {
+  font-size: 0.875rem;
+  margin: 0.5rem 0;
+}
+
+.otros-servicios .service-card a {
+  color: #1d72b8; /* Color del enlace */
+  text-decoration: none; /* Elimina el subrayado */
+  font-size: 1rem; /* Tamaño del texto */
+  display: inline-block; /* Asegura que el enlace se comporta como un bloque en línea */
+  transition: color 0.3s ease; /* Transición suave para el color del enlace */
+}
+
+.otros-servicios .service-card a:hover {
+  color: #ff5000; /* Color del enlace al pasar el mouse */
+}
