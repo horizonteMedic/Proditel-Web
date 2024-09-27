@@ -1,49 +1,48 @@
-/* src/components/NavbarMini.css */
-
 .navbar-mini {
-    background-color: #ff5100;
-    color: white;
-    padding: 0.1rem 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap; /* Permite que los elementos se muevan a la siguiente línea si es necesario */
+  background-color: #ff5100;
+  color: white;
+  padding: 0.3rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-left: 9em; /* Mueve la información de contacto 4em a la derecha */
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 12px;
+}
+
+.social-icons {
+  margin-right: 9em;
+  display: flex;
+  gap: 1rem;
+  margin-top: 0rem;
+}
+
+.icon {
+  color: white;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.icon:hover {
+  color: #e0a400;
+}
+
+/* Ocultar el NavbarMini en dispositivos móviles */
+@media (max-width: 768px) {
+  .navbar-mini {
+      display: none;
   }
-  
-  .contact-info {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    flex-wrap: wrap; /* Permite que los elementos se muevan a la siguiente línea si es necesario */
-  }
-  
-  .contact-item {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 10px;
-  }
-  
-  .social-icons {
-    display: flex;
-    gap: 1rem;
-    margin-top: 0rem; /* Añadir margen superior para separar de la sección de contacto */
-  }
-  
-  .icon {
-    color: white;
-    font-size: 1.2rem;
-    transition: color 0.3s ease;
-  }
-  
-  .icon:hover {
-    color: #e0a400;
-  }
-  
-  /* Ocultar el NavbarMini en dispositivos móviles */
-  @media (max-width: 768px) {
-    .navbar-mini {
-      display: none; /* Ocultar el navbar en dispositivos móviles */
-    }
-  }
-  
+}

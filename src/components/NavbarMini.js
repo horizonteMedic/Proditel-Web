@@ -23,13 +23,11 @@ const NavbarMini = () => {
       {/* Iconos de redes sociales */}
       <div className="social-icons">
         <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="icon">
-          <i className="fab fa-facebook-f"></i>
+          <i className="fa-brands fa-square-facebook"></i>
         </a>
-        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="icon">
-          <i className="fab fa-instagram"></i>
-        </a>
+ 
         <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="icon">
-          <i className="fab fa-linkedin-in"></i>
+          <i class="fa-brands fa-linkedin"></i>
         </a>
       </div>
     </div>
